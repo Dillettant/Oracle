@@ -5,7 +5,7 @@ This document tracks development progress, milestones, and decisions made during
 ## Current Status
 
 **Phase**: 1 - Foundation (MVP)
-**Status**: Planning Complete, Development Starting
+**Status**: MVP Components in Progress
 
 ## Milestone Tracker
 
@@ -14,12 +14,12 @@ This document tracks development progress, milestones, and decisions made during
 | Component | Status | Progress | Notes |
 |-----------|--------|----------|-------|
 | Project Structure | Done | 100% | README, docs, config files |
-| Database Schema | Not Started | 0% | |
-| Auth System | Not Started | 0% | |
-| Strategy Builder | Not Started | 0% | |
-| Backtest Engine | Not Started | 0% | |
-| Bot Scheduler | Not Started | 0% | |
-| Frontend Shell | Not Started | 0% | |
+| Database Schema | In Progress | 50% | Users + trading tables migration added |
+| Auth System | In Progress | 85% | Register/login/refresh + profile UI |
+| Strategy Builder | In Progress | 85% | Interactive canvas + library + backtest trigger |
+| Backtest Engine | In Progress | 70% | CRUD + async stubbed run |
+| Bot Scheduler | In Progress | 60% | CRUD + start/stop endpoints |
+| Frontend Shell | In Progress | 85% | Core pages + settings/profile/bots/backtests added |
 
 ### Phase 2 - Core Features
 
@@ -62,15 +62,19 @@ This document tracks development progress, milestones, and decisions made during
 
 ## In Progress
 
-*Nothing currently in progress*
+- User profile page wired to /users/me
+- Strategy builder library + backtest trigger
+- Settings center with Alpaca OAuth + market data check
+- Backtests launcher + results UI
+- Bot scheduler UI with start/stop controls
 
 ## Upcoming Work
 
-1. Set up backend project structure (FastAPI + SQLAlchemy)
-2. Create database migrations (Alembic)
-3. Implement user authentication
-4. Set up frontend project (Vite + React + TypeScript)
-5. Create basic UI shell with Robinhood styling
+1. Implement remaining MVP business logic (strategy execution, scheduling runtime, backtest processing)
+2. Add tests for auth + CRUD endpoints
+3. Wire frontend forms to backend API
+4. Build portfolio, bot manager, backtest results UI
+5. Add rate limiting + WebSocket streaming
 
 ## Technical Decisions Log
 
@@ -107,4 +111,4 @@ This document tracks development progress, milestones, and decisions made during
 
 ---
 
-*Last updated: 2025-01-01*
+*Last updated: 2025-01-04*

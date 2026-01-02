@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import auth, oauth
+from app.api.routes import alpaca, auth, backtests, bots, market, oauth, strategies, trading, users
 from app.core.config import settings
 
 
@@ -49,6 +49,13 @@ async def health_check():
 # API v1 routes
 app.include_router(auth.router, prefix=settings.api_v1_prefix)
 app.include_router(oauth.router, prefix=settings.api_v1_prefix)
+app.include_router(users.router, prefix=settings.api_v1_prefix)
+app.include_router(strategies.router, prefix=settings.api_v1_prefix)
+app.include_router(bots.router, prefix=settings.api_v1_prefix)
+app.include_router(backtests.router, prefix=settings.api_v1_prefix)
+app.include_router(market.router, prefix=settings.api_v1_prefix)
+app.include_router(trading.router, prefix=settings.api_v1_prefix)
+app.include_router(alpaca.router, prefix=settings.api_v1_prefix)
 
 
 if __name__ == "__main__":

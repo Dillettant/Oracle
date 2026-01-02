@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", "../.env"),
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     # Database
     postgres_host: str = "localhost"
-    postgres_port: int = 5433
+    postgres_port: int = 5432
     postgres_db: str = "oracle"
     postgres_user: str = "oracle"
     postgres_password: str = "oracle_dev_password"
@@ -85,7 +85,7 @@ class Settings(BaseSettings):
     password_hash_rounds: int = 12
 
     # Google OAuth
-    google_client_id: str = ""
+    google_client_id: str = "60446126210-511ovq2agv2ea6en4g8hf2gqc73k9412.apps.googleusercontent.com"
     google_client_secret: str = ""
     google_redirect_uri: str = "http://localhost:8000/api/v1/auth/google/callback"
 
@@ -94,6 +94,11 @@ class Settings(BaseSettings):
     alpaca_secret_key: str = ""
     alpaca_base_url: str = "https://paper-api.alpaca.markets"
     alpaca_data_url: str = "https://data.alpaca.markets"
+    alpaca_oauth_client_id: str = ""
+    alpaca_oauth_client_secret: str = ""
+    alpaca_oauth_redirect_uri: str = "http://localhost:8000/api/v1/alpaca/callback"
+    alpaca_oauth_authorize_url: str = "https://app.alpaca.markets/oauth/authorize"
+    alpaca_oauth_token_url: str = "https://api.alpaca.markets/oauth/token"
 
     @computed_field
     @property

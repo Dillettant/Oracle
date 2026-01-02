@@ -12,6 +12,10 @@ from app.core.config import settings
 from app.db.base import Base
 
 # Import all models to ensure they're registered with Base.metadata
+from app.models.alpaca import AlpacaConnection  # noqa: F401
+from app.models.backtest import Backtest  # noqa: F401
+from app.models.bot import Bot  # noqa: F401
+from app.models.strategy import Strategy  # noqa: F401
 from app.models.user import User  # noqa: F401
 
 # Alembic Config object

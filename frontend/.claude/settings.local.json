@@ -1,0 +1,11 @@
+{
+  "format": {
+    "line_length": 100,
+    "indent_size": 2
+  },
+  "style": {
+    "primary_color": "ember",
+    "font_display": "Space Grotesk",
+    "font_mono": "IBM Plex Mono"
+  }
+}

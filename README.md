@@ -341,8 +341,8 @@ The Minimum Viable Product includes all **P0** items, enabling:
 
 1. **User Registration & Login** - Create account, authenticate
 2. **Strategy Builder** - Visual drag-and-drop strategy creation
-3. **Backtesting** - Run simulations on historical data
-4. **Bot Scheduling** - Schedule strategies to run automatically
+3. **Backtesting** - Run stubbed simulations on historical data
+4. **Bot Scheduling** - Schedule strategies with start/stop control
 5. **Results Dashboard** - View P&L, trades, and performance
 
 ### MVP User Flow
@@ -497,10 +497,10 @@ See [docs/COMMERCIAL.md](./docs/COMMERCIAL.md) for details.
 
 ### Phase 1 - Foundation (MVP)
 - [x] Project structure and documentation
-- [ ] Authentication system
-- [ ] Basic strategy builder
-- [ ] Backtest engine
-- [ ] Bot scheduler
+- [x] Authentication system
+- [x] Basic strategy builder
+- [x] Backtest engine (stubbed run results)
+- [x] Bot scheduler (start/stop status)
 
 ### Phase 2 - Core Features
 - [ ] Advanced indicators

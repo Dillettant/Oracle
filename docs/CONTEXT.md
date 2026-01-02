@@ -150,7 +150,8 @@ backtests
 ├── /backtests
 │   ├── GET /
 │   ├── POST /
-│   └── GET /{id}
+│   ├── GET /{id}
+│   └── POST /{id}/run (async)
 ├── /orders
 │   └── GET /
 └── /market
@@ -177,9 +178,10 @@ backtests
 Phase 1 - Foundation (MVP)
 
 ### Active Development Areas
-- Project scaffolding and documentation
-- Database schema design
-- Authentication system
+- Strategy builder UX and saved strategy library
+- Backtest launch flow and stubbed results
+- Bot scheduler start/stop controls
+- Settings center with Alpaca OAuth
 
 ### Known Technical Debt
 - None yet (new project)
@@ -200,4 +202,4 @@ This section stores summarized context from development conversations. Updated v
 
 ---
 
-*Last updated: Project initialization*
+*Last updated: 2025-01-04*
